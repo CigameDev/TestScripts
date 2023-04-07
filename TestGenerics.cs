@@ -19,13 +19,13 @@ public class TestGenerics : MonoBehaviour
     }
 }
 
-public class MyClass<T> where T : IEnemy //nhu la ke thua binh thuong thoi
+public class MyClass<T> where T : IEnemy //rang buoc T truyen vao phai implement IEnemy
 {
     public T value;
 
-    public MyClass(T value)//phuong thuc khoi tao
+    public MyClass(T enemy)//phuong thuc khoi tao,enemy nhan Damage
     {
-        value.Damage();
+        enemy.Damage();
     }
 
     private T[]CreateArray(T firstElement,T secondElement)
